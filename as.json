@@ -1,0 +1,80 @@
+{
+    "data": [
+        {
+            "ask": 208.02,
+            "bid": 207.93,
+            "open": 207.03,
+            "high": 208.74,
+            "low": 205.4803,
+            "close": 207.99,
+            "volume": 33447396,
+            "averageVolume": 24848894,
+            "previousClose": 207.39,
+            "ticker": "AAPL",
+            "Startgain": 144,
+            "endgain": 2496.2400000000002,
+            "gain": -2352.2400000000002
+        },
+        {
+            "ask": 54,
+            "bid": 42.43,
+            "open": 52.62,
+            "high": 52.84,
+            "low": 52.21,
+            "close": 52.76,
+            "volume": 1596754,
+            "averageVolume": 1963719,
+            "previousClose": 52.76,
+            "ticker": "HIG",
+            "Startgain": 1464,
+            "endgain": 6588,
+            "gain": -5124
+        },
+        {
+            "ask": 348.85,
+            "bid": 348.01,
+            "open": 349.5,
+            "high": 350.99,
+            "low": 345.67,
+            "close": 348.44,
+            "volume": 2285202,
+            "averageVolume": 3554560,
+            "previousClose": 349.73,
+            "ticker": "BA",
+            "Startgain": 144,
+            "endgain": 4186.200000000001,
+            "gain": -4042.2000000000007
+        },
+        {
+            "ask": 252.1,
+            "bid": 251.95,
+            "open": 251.61,
+            "high": 253.06,
+            "low": 250.93,
+            "close": 252.1,
+            "volume": 5357202,
+            "averageVolume": 10525970,
+            "previousClose": 250.62,
+            "ticker": "NVDA",
+            "Startgain": 1000,
+            "endgain": 25210,
+            "gain": -24210
+        }
+    ],
+    "status": 200,
+    "config": {
+        "method": "GET",
+        "transformRequest": [
+            null
+        ],
+        "transformResponse": [
+            null
+        ],
+        "jsonpCallbackParam": "callback",
+        "url": "http://localhost:8000/getPortfolioData",
+        "headers": {
+            "Accept": "application/json, text/plain, */*"
+        }
+    },
+    "statusText": "OK"
+}
