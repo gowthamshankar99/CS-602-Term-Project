@@ -1,5 +1,5 @@
 
-
+const _ = require('underscore');
 const path = require('path');
 const express = require('express');
 const expressHandlerBars = require('express-handlebars');
@@ -32,6 +32,10 @@ module.exports.createGraphs = (req,res,next) => {
 	res.sendFile(path.join("/Users/Moni/Downloads/CS602_HW3_Gowrishankar_2/views/createGraphs.html"));
 }
 
+module.exports.contactMe = (req,res,next) => {
+	res.sendFile(path.join("/Users/Moni/Downloads/CS602_HW3_Gowrishankar_2/views/contact.html"));
+}
+
 module.exports.calculateData = (req,res,next) => {
 	 let TickerNames = [];
 		request('https://badnomyand.execute-api.us-east-1.amazonaws.com/Prod').then(function(done) {
@@ -46,6 +50,8 @@ module.exports.calculateData = (req,res,next) => {
 								//console.log(result.body.quote);
 								if(result.body != undefined)
 								{	
+									if(result.body.quote != undefined)
+									{
 									let parser = JSON.parse(done).message.Items[i];
 									tickerDetails = result.body.quote.financeData;
 									tickerDetails.ticker = parser.ticker.S;
@@ -68,6 +74,7 @@ module.exports.calculateData = (req,res,next) => {
 										},1000);
 										
 									}
+								}
 								}
 								else{
 									console.log("Issue with the call");
@@ -97,8 +104,9 @@ module.exports.calculateData = (req,res,next) => {
 							 .header("X-Mashape-Key", "4B5APBMEQVmshPhOG6gHcc4bELr6p1z8wQgjsnczgNTYuQPwpx")
 							 .header("X-Mashape-Host", "adakadavra-smarket.p.mashape.com")
 							 .end(function (result) {
-								 //console.log(result.body.quote);
-								 
+								 //console.log(result.body);
+								 if(_.has(result.body, 'quote'))
+								 {
 								 let parser = JSON.parse(done).message.Items[i];
 								 tickerDetails = result.body.quote.financeData;
 								 tickerDetails.ticker = parser.ticker.S;
@@ -123,6 +131,13 @@ module.exports.calculateData = (req,res,next) => {
 									 },1000);
 									 
 								 }
+								}
+								else
+								{
+									console.log("***************************************************************");
+									console.log(result.body);
+									console.log("***************************************************************");
+								}
 							 });
 						 }
  

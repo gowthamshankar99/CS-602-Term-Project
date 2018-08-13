@@ -22,11 +22,11 @@
             <nav>
                     <a href="#" style="padding: 10px" ng-click="removeRefresh()">Home</a>
                     <a href="http://localhost:8000/watchlist" style="padding: 10px" ng-click="removeRefresh()">Portfolio</a>
-                    <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add Ticker</a>
-                    <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove Ticker</a>
+                    <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add_Ticker_to_watchlist</a>
+                    <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove_Ticker_to_watchlist</a>
                     <a href="http://localhost:8000/portfolio" style="padding: 10px" ng-click="removeRefresh()">Watchlist</a>
                     <a href="http://localhost:8000/createGraphs" style="padding: 10px">Analysis</a>
-                    <a href="#" style="padding: 10px" >Contact Me</a>
+                    <a href="http://localhost:8000/contactMe" style="padding: 10px" >Contact Me</a>
                 <!--            <a href="#" style="text-align: right;padding: 340px;">Login</a> -->
             </nav>
         </div>
@@ -73,6 +73,7 @@
             <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
         </div>
     </script>
+
         <div class="container">
             <h1 class="jumbotron container-fluid">My Portfolio</h1>
             <br>
@@ -81,7 +82,7 @@
         <div style="text-align:center">
             <button type="button" class="btn btn-success" ng-click="$ctrl.open('lg')">Add Stocks</button>
 
-            <button type="button" class="btn btn-danger" ng-click="$ctrl.open('lg')">Sell Stocks</button>
+            <button type="button" class="btn btn-danger" ng-click="$ctrl2.open('lg')">Sell Stocks</button>
         </div>
 
         
@@ -111,6 +112,49 @@
         
             </table>
     </div>
+    <div ng-controller="ModalDemoCtrl as $ctrl2" class="container">
+            <script type="text/ng-template" id="myModalContent2.html">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title">Remove/Sell Stock from your Portfolio</h3>
+                </div>
+                <div class="modal-body" id="modal-body">
+               <!--     <ul>
+                        <li ng-repeat="item in $ctrl.items">
+                            <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+                        </li>
+                    </ul> -->
+                    {{$ctrl2.gowtham}}
+                    <form>
+                            <div class="form-group">
+                                    <label class="control-label col-sm-2" for="pwd">Ticker Name:</label>
+                                    <div class="col-sm-10">          
+                                      <input type="text" class="form-control" id="tickerName" placeholder="Ticker Name" name="tickerName" ng-model="tickerName">
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                    <label class="control-label col-sm-2" for="pwd">Price:</label>
+                                    <div class="col-sm-10">          
+                                      <input type="text" class="form-control" id="price" placeholder="Price" name="price" ng-model="price">
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                    <label class="control-label col-sm-2" for="pwd">Shares:</label>
+                                    <div class="col-sm-10">          
+                                      <input type="text" class="form-control" id="shares" placeholder="Shares" name="shares" ng-model="shares">
+                                    </div>
+                            </div>
+        
+                    </form>    
+                    <button class="btn btn-danger">Add</button>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" ng-click="$ctrl2.ok()">OK</button>
+                    <button class="btn btn-warning" type="button" ng-click="$ctrl2.cancel()">Cancel</button>
+                </div>
+            </script>
+        </div>
 </body>
 
 </html>

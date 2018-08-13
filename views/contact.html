@@ -1,0 +1,63 @@
+<html ng-app="ngModule">
+        <!-- https://arzktrqj0a.execute-api.us-east-1.amazonaws.com/PROD/{ticker} -->
+        <head>
+                <script src="/socket.io.js"></script>
+                <script>
+                    
+                </script>
+        
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+                <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        
+                <script src="/app.js"></script>
+                <script src="/ui-bootstrap-tpls-2.5.0.min.js"></script>
+            <script>
+         
+            </script>
+        </head>
+        
+        <body>
+                        <div class="container">
+                                        <div class="navbar navbar-inverse">
+                                        <nav>
+                                                <a href="#" style="padding: 10px" ng-click="removeRefresh()">Home</a>
+                                                <a href="http://localhost:8000/watchlist" style="padding: 10px" ng-click="removeRefresh()">Portfolio</a>
+                                                <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add_Ticker_to_watchlist</a>
+                                                <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove_Ticker_to_watchlist</a>
+                                                <a href="http://localhost:8000/portfolio" style="padding: 10px" ng-click="removeRefresh()">Watchlist</a>
+                                                <a href="http://localhost:8000/createGraphs" style="padding: 10px">Analysis</a>
+                                                <a href="http://localhost:8000/contactMe" style="padding: 10px" >Contact Me</a>
+                                <!--            <a href="#" style="text-align: right;padding: 340px;">Login</a> -->
+                                        </nav>
+                                        </div>
+                        </div>
+                        <div ng-controller="ngRemoveTicker">
+                            
+                                        <div class="container">
+                                            <h1 class="jumbotron container-fluid">Contact Me</h1>
+                                            <br>
+                                            <form action="#">
+                                                    <div class="form-group">
+                                                            <label for="text">First Name:</label>
+                                                            <input type="text" class="form-control" id="firstName">
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label for="text">Last Name:</label>
+                                                            <input type="text" class="form-control" id="lastName">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="email">Email address:</label>
+                                                        <input type="email" class="form-control" id="email">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>
+                                        </div>
+                        </div>
+                        <div class="container">
+
+                        </div>
+        </body>
+        
+        </html>

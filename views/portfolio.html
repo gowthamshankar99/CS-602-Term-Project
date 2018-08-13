@@ -24,11 +24,11 @@
                                     <nav>
                                             <a href="#" style="padding: 10px" ng-click="removeRefresh()">Home</a>
                                             <a href="http://localhost:8000/watchlist" style="padding: 10px" ng-click="removeRefresh()">Portfolio</a>
-                                            <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add Ticker</a>
-                                            <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove Ticker</a>
+                                            <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add_Ticker_to_watchlist</a>
+                                            <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove_Ticker_to_watchlist</a>
                                             <a href="http://localhost:8000/portfolio" style="padding: 10px" ng-click="removeRefresh()">Watchlist</a>
                                             <a href="http://localhost:8000/createGraphs" style="padding: 10px">Analysis</a>
-                                            <a href="#" style="padding: 10px" >Contact Me</a>
+                                            <a href="http://localhost:8000/contactMe" style="padding: 10px" >Contact Me</a>
 
                             <!--            <a href="#" style="text-align: right;padding: 340px;">Login</a> -->
                                     </nav>
@@ -39,7 +39,7 @@
                         
                         
                             <div class="container">
-                                <h1 class="jumbotron">Batman's Stock Watchlist</h1>
+                                <h1 class="jumbotron">My Stock Watchlist</h1>
                             </div>
                             <form class="container">
                             </form>
@@ -58,7 +58,7 @@
                                 <tbody>
                                     <tr ng-repeat="tn in tickerNames | orderBy : 'ticker'">
                                         <td ng-style="{background: (tn['previousClose'] > tn['close'] ? '#E94B3C' : '#92B558')}">{{tn['ticker']}}</td>
-                                        <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['close']}}</td>
+                                        <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['ask']}}</td>
                                         <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['high']}}</td>
                                         <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['low']}}</td>
                                         <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['volume']}}</td>

@@ -67,10 +67,15 @@ io.on('connection', function (socket) {
                           //console.log(result.body.quote);
                           if(result.body != undefined)
                           {
-                            tickerDetails = result.body.quote.financeData;
-                            tickerDetails.ticker = item.tickerName.S;
-                            TickerNames.push(tickerDetails);
-                            socket.emit('message-from-server2', TickerNames);
+                            if(result.body.quote != undefined)
+                            {
+                                tickerDetails = result.body.quote.financeData;
+                                tickerDetails.ticker = item.tickerName.S;
+                                console.log(tickerDetails);
+                                TickerNames.push(tickerDetails);
+                                socket.emit('message-from-server2', TickerNames);
+                            }  
+
                           }
                           else
                           {

@@ -1,80 +1,84 @@
 {
-    "data": [
-        {
-            "ask": 208.02,
-            "bid": 207.93,
-            "open": 207.03,
-            "high": 208.74,
-            "low": 205.4803,
-            "close": 207.99,
-            "volume": 33447396,
-            "averageVolume": 24848894,
-            "previousClose": 207.39,
-            "ticker": "AAPL",
-            "Startgain": 144,
-            "endgain": 2496.2400000000002,
-            "gain": -2352.2400000000002
+    "data": {
+        "Meta Data": {
+            "1. Information": "Daily Prices (open, high, low, close) and Volumes",
+            "2. Symbol": "AAPL",
+            "3. Last Refreshed": "2018-08-10",
+            "4. Output Size": "Compact",
+            "5. Time Zone": "US/Eastern"
         },
-        {
-            "ask": 54,
-            "bid": 42.43,
-            "open": 52.62,
-            "high": 52.84,
-            "low": 52.21,
-            "close": 52.76,
-            "volume": 1596754,
-            "averageVolume": 1963719,
-            "previousClose": 52.76,
-            "ticker": "HIG",
-            "Startgain": 1464,
-            "endgain": 6588,
-            "gain": -5124
-        },
-        {
-            "ask": 348.85,
-            "bid": 348.01,
-            "open": 349.5,
-            "high": 350.99,
-            "low": 345.67,
-            "close": 348.44,
-            "volume": 2285202,
-            "averageVolume": 3554560,
-            "previousClose": 349.73,
-            "ticker": "BA",
-            "Startgain": 144,
-            "endgain": 4186.200000000001,
-            "gain": -4042.2000000000007
-        },
-        {
-            "ask": 252.1,
-            "bid": 251.95,
-            "open": 251.61,
-            "high": 253.06,
-            "low": 250.93,
-            "close": 252.1,
-            "volume": 5357202,
-            "averageVolume": 10525970,
-            "previousClose": 250.62,
-            "ticker": "NVDA",
-            "Startgain": 1000,
-            "endgain": 25210,
-            "gain": -24210
-        }
-    ],
-    "status": 200,
-    "config": {
-        "method": "GET",
-        "transformRequest": [
-            null
-        ],
-        "transformResponse": [
-            null
-        ],
-        "jsonpCallbackParam": "callback",
-        "url": "http://localhost:8000/getPortfolioData",
-        "headers": {
-            "Accept": "application/json, text/plain, */*"
-        }
-    },
-    "statusText": "OK"
-}
+        "Time Series (Daily)": {
+            "2018-08-10": {
+                "1. open": "207.3600",
+                "2. high": "209.1000",
+                "3. low": "206.6700",
+                "4. close": "207.5300",
+                "5. volume": "24611202"
+            },
+            "2018-08-09": {
+                "1. open": "207.2800",
+                "2. high": "209.7800",
+                "3. low": "207.2000",
+                "4. close": "208.8800",
+                "5. volume": "23492626"
+            },
+            "2018-08-08": {
+                "1. open": "206.0500",
+                "2. high": "207.8100",
+                "3. low": "204.5200",
+                "4. close": "207.2500",
+                "5. volume": "22525487"
+            },
+            "2018-08-07": {
+                "1. open": "209.3200",
+                "2. high": "209.5000",
+                "3. low": "206.7600",
+                "4. close": "207.1100",
+                "5. volume": "25587387"
+            },
+            "2018-08-06": {
+                "1. open": "208.0000",
+                "2. high": "209.2500",
+                "3. low": "207.0700",
+                "4. close": "209.0700",
+                "5. volume": "25425387"
+            },
+            "2018-08-03": {
+                "1. open": "207.0300",
+                "2. high": "208.7400",
+                "3. low": "205.4803",
+                "4. close": "207.9900",
+                "5. volume": "33447396"
+            },
+            "2018-08-02": {
+                "1. open": "200.5800",
+                "2. high": "208.3800",
+                "3. low": "200.3500",
+                "4. close": "207.3900",
+                "5. volume": "62404012"
+            },
+            "2018-08-01": {
+                "1. open": "199.1300",
+                "2. high": "201.7600",
+                "3. low": "197.3100",
+                "4. close": "201.5000",
+                "5. volume": "67935716"
+            },
+            "2018-07-31": {
+                "1. open": "190.3000",
+                "2. high": "192.1400",
+                "3. low": "189.3400",
+                "4. close": "190.2900",
+                "5. volume": "39373038"
+            },
+            "2018-07-30": {
+                "1. open": "191.9000",
+                "2. high": "192.2000",
+                "3. low": "189.0700",
+                "4. close": "189.9100",
+                "5. volume": "21029535"
+            },
+            "2018-07-27": {
+                "1. open": "194.9900",
+                "2. high": "195.1900",
+                "3. low": "190.1000","4. ...

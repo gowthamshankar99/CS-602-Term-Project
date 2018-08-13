@@ -3,15 +3,16 @@ const router = express.Router();
 
 // other modules
 
-const employeeModule = require("./employeeModule");
+const stockModule = require("./stockModule");
 
-const portfolio = employeeModule.getPortoflio;
-const watchlist = employeeModule.getWatchList;
-const removeTicker = employeeModule.removeTicker;
-const addTicker = employeeModule.addTicker;
-const getPortfolioData = employeeModule.calculateData;
-const calculateTotalGain = employeeModule.calculateTotalGain;
-const createGraphs =   employeeModule.createGraphs;
+const portfolio = stockModule.getPortoflio;
+const watchlist = stockModule.getWatchList;
+const removeTicker = stockModule.removeTicker;
+const addTicker = stockModule.addTicker;
+const getPortfolioData = stockModule.calculateData;
+const calculateTotalGain = stockModule.calculateTotalGain;
+const createGraphs =   stockModule.createGraphs;
+const contactMe = stockModule.contactMe;
 
 
 router.get('/', (req, res, next) => {
@@ -33,6 +34,8 @@ router.get('/getPortfolioData',getPortfolioData);
 router.get('/calculateTotalGain',calculateTotalGain);
 
 router.get('/createGraphs',createGraphs);
+
+router.get('/contactMe', contactMe);
 
 
 module.exports = router;

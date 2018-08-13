@@ -1,4 +1,4 @@
-<html>
+<html ng-app="ngModule">
 <!-- https://arzktrqj0a.execute-api.us-east-1.amazonaws.com/PROD/{ticker} -->
 
 <head>
@@ -19,67 +19,38 @@
 
 </head>
 
-<body>
+<body ng-controller="graphController">
 
     <div class="container">
         <div class="navbar navbar-inverse">
             <nav>
-                <a href="#" style="padding: 10px" ng-click="removeRefresh()">Home</a>
-                <a href="http://localhost:8000/watchlist" style="padding: 10px" ng-click="removeRefresh()">Portfolio</a>
-                <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add Ticker</a>
-                <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove Ticker</a>
-                <a href="http://localhost:8000/portfolio" style="padding: 10px" ng-click="removeRefresh()">Watchlist</a>
-                <a href="http://localhost:8000/createGraphs" style="padding: 10px">Analysis</a>
-                <a href="#" style="padding: 10px">Contact Me</a>
+                    <a href="#" style="padding: 10px" ng-click="removeRefresh()">Home</a>
+                    <a href="http://localhost:8000/watchlist" style="padding: 10px" ng-click="removeRefresh()">Portfolio</a>
+                    <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add_Ticker_to_watchlist</a>
+                    <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove_Ticker_to_watchlist</a>
+                    <a href="http://localhost:8000/portfolio" style="padding: 10px" ng-click="removeRefresh()">Watchlist</a>
+                    <a href="http://localhost:8000/createGraphs" style="padding: 10px">Analysis</a>
+                    <a href="http://localhost:8000/contactMe" style="padding: 10px" >Contact Me</a>
                 <!--            <a href="#" style="text-align: right;padding: 340px;">Login</a> -->
             </nav>
         </div>
-
+        <div class="container">
+                <h1 class="jumbotron">Analyze my Stocks</h1>
+            </div>
+        <select class="form-control" ng-model="elec">
+                <option ng-repeat="ticker in tickers">{{ticker}}</option>
+        </select>
+        <div style="text-align:center"><button class="btn btn-danger" ng-click="searchClick()">Search</button></div>
         <canvas id="myChart"></canvas>
+        <br>
+        <canvas id="myChart2"></canvas>
     </div>
 
-
+    <script src="graph.js"></script>
 
 
 </body>
 <script>
-        //alert(document.getElementById("myChart"));
-        var ctx = document.getElementById("myChart").getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2,100],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
+ 
     </script>
 </html>

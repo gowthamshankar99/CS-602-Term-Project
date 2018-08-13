@@ -24,11 +24,11 @@
                                     <nav>
                                             <a href="#" style="padding: 10px" ng-click="removeRefresh()">Home</a>
                                             <a href="http://localhost:8000/watchlist" style="padding: 10px" ng-click="removeRefresh()">Portfolio</a>
-                                            <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add Ticker</a>
-                                            <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove Ticker</a>
+                                            <a href="http://localhost:8000/addTicker" style="padding: 10px" ng-click="removeRefresh()">Add_Ticker_to_watchlist</a>
+                                            <a href="http://localhost:8000/removeTicker" style="padding: 10px" ng-click="removeRefresh()">Remove_Ticker_to_watchlist</a>
                                             <a href="http://localhost:8000/portfolio" style="padding: 10px" ng-click="removeRefresh()">Watchlist</a>
                                             <a href="http://localhost:8000/createGraphs" style="padding: 10px">Analysis</a>
-                                            <a href="#" style="padding: 10px" >Contact Me</a>
+                                            <a href="http://localhost:8000/contactMe" style="padding: 10px" >Contact Me</a>
                             <!--            <a href="#" style="text-align: right;padding: 340px;">Login</a> -->
                                     </nav>
                                     </div>
@@ -52,5 +52,4 @@
                                     <div class="container" ng-class="'alert-' + (alert.type || 'danger')" uib-alert type="danger" close="closeAlert2()" ng-if="show2" dismiss-on-timeout="3000">Error removing Ticker from the portfolio.</div>
                     </div>
     </body>
-    
     </html>

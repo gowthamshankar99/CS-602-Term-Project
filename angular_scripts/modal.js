@@ -164,3 +164,30 @@ angular.module('ui.bootstrap.demo').component('modalComponent', {
     };
   }
 });
+
+angular.module('ui.bootstrap.demo').component('modalComponent', {
+    templateUrl: 'myModalContent2.html',
+    bindings: {
+      resolve: '<',
+      close: '&',
+      dismiss: '&'
+    },
+    controller: function () {
+      var $ctrl2 = this;
+  
+      $ctrl2.$onInit = function () {
+        $ctrl2.items = $ctrl2.resolve.items;
+        $ctrl2.selected = {
+          item: $ctrl2.items[0]
+        };
+      };
+  
+      $ctrl2.ok = function () {
+        $ctrl2.close({$value: $ctrl2.selected.item});
+      };
+  
+      $ctrl2.cancel = function () {
+        $ctrl2.dismiss({$value: 'cancel'});
+      };
+    }
+  });
